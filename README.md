@@ -1,3 +1,3 @@
-# singapore-building-address-scraper
+# singapore-building-address-information
 
-A web scraper that scrapes for information of Singapore Building Addresses, using OneMap's Search API
+A repository of Singapore building address information, scraped with OneMap's Search API 
