@@ -38,7 +38,7 @@ class Scraper:
                 try:
                     data = future.result()
                     nos_results = data['found']
-                    nos_pages = data['pageNum']
+                    nos_pages = data['totalNumPages']
                     self.d_all_options[code] = np.array((nos_results, nos_pages))
                 except Exception as e:
                     self.d_error_1[code] = e
@@ -69,7 +69,7 @@ class Scraper:
                 url = future_to_url[future]
                 try:
                     data = future.result()
-                    for j in range(data['found']):
+                    for j in range(len(data['results'])):
                         blk_no = data['results'][j]['BLK_NO']
                         road_name = data['results'][j]['ROAD_NAME']
                         building = data['results'][j]['BUILDING']
@@ -89,7 +89,7 @@ class Scraper:
 
     def get_scraped_address_dataframe(self):
         return self.df
-
+    
     def save_scraped_address(self, name_of_file):
         return self.df.to_csv(name_of_file)
                 
