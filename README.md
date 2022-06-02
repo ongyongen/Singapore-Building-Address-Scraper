@@ -1,3 +1,3 @@
-# singapore-building-address-data-repository 
+# singapore-building-address-data-web-scraper
 
-A repository of Singapore building address data, scraped with OneMap's Search API 
+A multi-threaded web scraper that scrapes for building address data in Singapore, using OneMap's Search API
